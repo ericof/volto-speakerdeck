@@ -82,6 +82,10 @@ storybook-build:		## Storybook: Build
 start-test-acceptance-cors-proxy: ## Start a Cors Proxy container
 	docker run -it --rm -p 9090:8080 orrisroot/cors-anywhere:latest
 
+.PHONY: start-test-acceptance-cors-proxy-ci
+start-test-acceptance-cors-proxy-ci: ## Start a Cors Proxy container in the CI
+	docker run -i --rm -p 9090:8080 orrisroot/cors-anywhere:latest
+
 .PHONY: start-test-acceptance-frontend-dev
 start-test-acceptance-frontend-dev: ## Start acceptance frontend in dev mode
 	CI=true RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm start

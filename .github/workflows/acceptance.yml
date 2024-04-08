@@ -7,6 +7,7 @@ on:
       - "*.yaml"
       - "cypress/**"
       - "packages/**"
+      - ".github/workflows/acceptance.yml"
 
 env:
   NODE_VERSION: 20.x
@@ -64,7 +65,7 @@ jobs:
         name: Start Servers
         with:
           run: |
-            make start-test-acceptance-cors-proxy &
+            make start-test-acceptance-cors-proxy-ci &
             make start-test-acceptance-server-ci &
             make start-test-acceptance-frontend &
           # your step-level and job-level environment variables are available to your commands as-is
