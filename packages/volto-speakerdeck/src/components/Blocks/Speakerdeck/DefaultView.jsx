@@ -29,7 +29,7 @@ const SpeakerdeckView = (props) => {
           name={iconSVG}
           className="blockIcon"
           size={'50px'}
-          color={'#000'}
+          color={'#009287'}
         />
       </div>
     </div>
